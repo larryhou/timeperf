@@ -12,7 +12,7 @@
 extern "C" {
 #endif
 
-void runtest();
+void runtest(void);
 #ifdef __cplusplus
 }
 #endif
