@@ -15,37 +15,47 @@
 #endif
 
 void measure(std::function<void()> method) {
-    for (auto i = 0; i < 3; i++) {
-        auto beg = std::chrono::system_clock::now();
-        for (auto i = 0; i < 1000000; i++) {method();}
-        auto end = std::chrono::system_clock::now();
+    int64_t total = 0;
+    static const int REPEAT_COUNT = 10;
+    static const int SAMPLE_COUNT = 1000000;
+    
+    for (auto i = 0; i < REPEAT_COUNT; i++) {
+        auto beg = std::chrono::high_resolution_clock::now();
+        for (auto i = 0; i < SAMPLE_COUNT; i++) {method();}
+        auto end = std::chrono::high_resolution_clock::now();
         auto elapse = std::chrono::duration_cast<std::chrono::nanoseconds>(end - beg).count();
-        std::cout << i << ": " << elapse << std::endl;
+        std::cout << '#' << i << ' ' << elapse << std::endl;
+        total += elapse;
     }
+    std::cout << '#' << 'M' << ' ' << total / REPEAT_COUNT << ' ' << total / REPEAT_COUNT / SAMPLE_COUNT << std::endl;
+    
 }
 
 int main(int argc, const char * argv[]) {
     struct timeval tv;
-    std::cout << "gettimeofday:" << std::endl;
+    std::cout << "gettimeofday" << std::endl;
     measure([&](){ gettimeofday(&tv, 0); });
     
-    std::cout << "clock:" << std::endl;
+    std::cout << "clock" << std::endl;
     measure([&](){ clock(); });
     
-    std::cout << "system_clock:" << std::endl;
+    std::cout << "std::chrono::high_resolution_clock::now" << std::endl;
+    measure([&](){ std::chrono::high_resolution_clock::now(); });
+    
+    std::cout << "std::chrono::system_clock::now" << std::endl;
     measure([&](){ std::chrono::system_clock::now(); });
     
-    std::cout << "steady_clock:" << std::endl;
+    std::cout << "std::chrono::steady_clock::now" << std::endl;
     measure([&](){ std::chrono::steady_clock::now(); });
     
-    std::cout << "steady_clock:" << std::endl;
+    std::cout << "std::chrono::steady_clock::now" << std::endl;
     measure([&](){ std::chrono::steady_clock::now(); });
     
     struct timespec tp;
-    std::cout << "clock_gettime(CLOCK_MONOTONIC):" << std::endl;
+    std::cout << "clock_gettime(CLOCK_MONOTONIC)" << std::endl;
     measure([&](){ clock_gettime(CLOCK_MONOTONIC, &tp); });
     
-    std::cout << "clock_gettime(CLOCK_PROCESS_CPUTIME_ID):" << std::endl;
+    std::cout << "clock_gettime(CLOCK_PROCESS_CPUTIME_ID)" << std::endl;
     measure([&](){ clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &tp); });
     
 #ifdef __APPLE__
