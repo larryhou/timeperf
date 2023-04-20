@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		6B38870929F0E52700A5DE16 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B38870829F0E52700A5DE16 /* main.cpp */; };
+		6B38871229F1133500A5DE16 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B38871029F1133500A5DE16 /* test.cpp */; };
+		6B38874A29F1150D00A5DE16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B38874929F1150D00A5DE16 /* AppDelegate.m */; };
+		6B38874D29F1150D00A5DE16 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B38874C29F1150D00A5DE16 /* SceneDelegate.m */; };
+		6B38875029F1150D00A5DE16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B38874F29F1150D00A5DE16 /* ViewController.m */; };
+		6B38875329F1150D00A5DE16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B38875129F1150D00A5DE16 /* Main.storyboard */; };
+		6B38875529F1150E00A5DE16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B38875429F1150E00A5DE16 /* Assets.xcassets */; };
+		6B38875829F1150E00A5DE16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B38875629F1150E00A5DE16 /* LaunchScreen.storyboard */; };
+		6B38875B29F1150E00A5DE16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B38875A29F1150E00A5DE16 /* main.m */; };
+		6B38877B29F1153000A5DE16 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B38871029F1133500A5DE16 /* test.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +34,31 @@
 /* Begin PBXFileReference section */
 		6B38870529F0E52700A5DE16 /* timeperf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = timeperf; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B38870829F0E52700A5DE16 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6B38871029F1133500A5DE16 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		6B38871129F1133500A5DE16 /* test.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = test.hpp; sourceTree = "<group>"; };
+		6B38874629F1150D00A5DE16 /* iostimeperf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iostimeperf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B38874829F1150D00A5DE16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6B38874929F1150D00A5DE16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6B38874B29F1150D00A5DE16 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		6B38874C29F1150D00A5DE16 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		6B38874E29F1150D00A5DE16 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6B38874F29F1150D00A5DE16 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6B38875229F1150D00A5DE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6B38875429F1150E00A5DE16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B38875729F1150E00A5DE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B38875929F1150E00A5DE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B38875A29F1150E00A5DE16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6B38870229F0E52700A5DE16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B38874329F1150D00A5DE16 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +71,9 @@
 		6B3886FC29F0E52700A5DE16 = {
 			isa = PBXGroup;
 			children = (
+				6B38870F29F112D100A5DE16 /* test */,
 				6B38870729F0E52700A5DE16 /* timeperf */,
+				6B38874729F1150D00A5DE16 /* iostimeperf */,
 				6B38870629F0E52700A5DE16 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				6B38870529F0E52700A5DE16 /* timeperf */,
+				6B38874629F1150D00A5DE16 /* iostimeperf.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +93,33 @@
 				6B38870829F0E52700A5DE16 /* main.cpp */,
 			);
 			path = timeperf;
+			sourceTree = "<group>";
+		};
+		6B38870F29F112D100A5DE16 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				6B38871029F1133500A5DE16 /* test.cpp */,
+				6B38871129F1133500A5DE16 /* test.hpp */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		6B38874729F1150D00A5DE16 /* iostimeperf */ = {
+			isa = PBXGroup;
+			children = (
+				6B38874829F1150D00A5DE16 /* AppDelegate.h */,
+				6B38874929F1150D00A5DE16 /* AppDelegate.m */,
+				6B38874B29F1150D00A5DE16 /* SceneDelegate.h */,
+				6B38874C29F1150D00A5DE16 /* SceneDelegate.m */,
+				6B38874E29F1150D00A5DE16 /* ViewController.h */,
+				6B38874F29F1150D00A5DE16 /* ViewController.m */,
+				6B38875129F1150D00A5DE16 /* Main.storyboard */,
+				6B38875429F1150E00A5DE16 /* Assets.xcassets */,
+				6B38875629F1150E00A5DE16 /* LaunchScreen.storyboard */,
+				6B38875929F1150E00A5DE16 /* Info.plist */,
+				6B38875A29F1150E00A5DE16 /* main.m */,
+			);
+			path = iostimeperf;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +142,23 @@
 			productReference = 6B38870529F0E52700A5DE16 /* timeperf */;
 			productType = "com.apple.product-type.tool";
 		};
+		6B38874529F1150D00A5DE16 /* iostimeperf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B38877229F1150F00A5DE16 /* Build configuration list for PBXNativeTarget "iostimeperf" */;
+			buildPhases = (
+				6B38874229F1150D00A5DE16 /* Sources */,
+				6B38874329F1150D00A5DE16 /* Frameworks */,
+				6B38874429F1150D00A5DE16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iostimeperf;
+			productName = iostimeperf;
+			productReference = 6B38874629F1150D00A5DE16 /* iostimeperf.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -89,9 +166,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					6B38870429F0E52700A5DE16 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					6B38874529F1150D00A5DE16 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -110,9 +191,23 @@
 			projectRoot = "";
 			targets = (
 				6B38870429F0E52700A5DE16 /* timeperf */,
+				6B38874529F1150D00A5DE16 /* iostimeperf */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B38874429F1150D00A5DE16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B38875829F1150E00A5DE16 /* LaunchScreen.storyboard in Resources */,
+				6B38875529F1150E00A5DE16 /* Assets.xcassets in Resources */,
+				6B38875329F1150D00A5DE16 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B38870129F0E52700A5DE16 /* Sources */ = {
@@ -120,10 +215,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B38870929F0E52700A5DE16 /* main.cpp in Sources */,
+				6B38871229F1133500A5DE16 /* test.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B38874229F1150D00A5DE16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B38875029F1150D00A5DE16 /* ViewController.m in Sources */,
+				6B38874A29F1150D00A5DE16 /* AppDelegate.m in Sources */,
+				6B38875B29F1150E00A5DE16 /* main.m in Sources */,
+				6B38877B29F1153000A5DE16 /* test.cpp in Sources */,
+				6B38874D29F1150D00A5DE16 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6B38875129F1150D00A5DE16 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B38875229F1150D00A5DE16 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6B38875629F1150E00A5DE16 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B38875729F1150E00A5DE16 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6B38870A29F0E52700A5DE16 /* Debug */ = {
@@ -251,6 +378,65 @@
 			};
 			name = Release;
 		};
+		6B38877329F1150F00A5DE16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRLP6W5S32;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iostimeperf/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.larryhou.iostimeperf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6B38877429F1150F00A5DE16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRLP6W5S32;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iostimeperf/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.larryhou.iostimeperf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -268,6 +454,15 @@
 			buildConfigurations = (
 				6B38870D29F0E52700A5DE16 /* Debug */,
 				6B38870E29F0E52700A5DE16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B38877229F1150F00A5DE16 /* Build configuration list for PBXNativeTarget "iostimeperf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B38877329F1150F00A5DE16 /* Debug */,
+				6B38877429F1150F00A5DE16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
