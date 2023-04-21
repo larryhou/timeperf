@@ -41,7 +41,7 @@ inline int64_t perf::gettime() {
 #else
     struct timespec ts;
     clock_gettime(CLOCK_MONOTONIC, &ts);
-    return ts.tv_sec * NANOSECONDS_PER_SECOND + ts.tv_nsec;
+    return int64_t(ts.tv_sec) * NANOSECONDS_PER_SECOND + ts.tv_nsec;
 #endif
 }
 
