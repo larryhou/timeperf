@@ -12,28 +12,10 @@
 namespace timeperf {
 perf perf::shared;
 
-time time::operator -(const time &v) const {
-    time r{sec-v.sec, nanosec-v.nanosec};
-    if (r.nanosec < 0) {
-        r.nanosec += NANOSECONDS_PER_SECOND;
-        r.sec--;
-    }
-    return r;
-}
-
-time time::operator +(const time &v) const {
-    time r{sec+v.sec, nanosec+v.nanosec};
-    if (r.nanosec >= NANOSECONDS_PER_SECOND) {
-        r.nanosec -= NANOSECONDS_PER_SECOND;
-        r.sec++;
-    }
-    return r;
-}
-
-node::node(int32_t id, struct time time): id(id), time(time) { }
+node::node(int32_t id, int64_t time): id(id), time(time) { }
 
 std::ostream& node::dump(std::ostream &out, int level)  {
-    indent(out, level) << "[" << id << "] " << elapse / 1000 << '\n';
+    indent(out, level) << "[" << id << "] " << elapse << '\n';
     for (auto i = 0; i < nodes.size(); i++) { nodes[i]->dump(out, level + 1); }
     return out;
 }
@@ -47,10 +29,20 @@ node::~node() {
 //    printf("~node %d\n", id);
 }
 
-inline time perf::gettime() {
-    struct timeval tv;
-    gettimeofday(&tv, 0);
-    return {static_cast<int64_t>(tv.tv_sec), static_cast<int64_t>(tv.tv_usec * 1000)};
+perf::perf() {
+#ifdef __APPLE__
+    mach_timebase_info(&info);
+#endif
+}
+
+inline int64_t perf::gettime() {
+#ifdef __APPLE__
+    return mach_absolute_time();
+#else
+    struct timespec ts;
+    clock_gettime(CLOCK_MONOTONIC, &ts);
+    return ts.tv_sec * NANOSECONDS_PER_SECOND + ts.tv_nsec;
+#endif
 }
 
 void perf::enter(int32_t id) {
@@ -61,8 +53,10 @@ void perf::enter(int32_t id) {
 
 nodeptr perf::exit() {
     auto top = stack.top();
-    auto dur = gettime() - top->time;
-    top->elapse = dur.sec * NANOSECONDS_PER_SECOND + dur.nanosec;
+    top->elapse = gettime() - top->time;
+#ifdef __APPLE__
+    top->elapse = top->elapse * info.numer / info.denom;
+#endif
     stack.pop();
     return top;
 }
