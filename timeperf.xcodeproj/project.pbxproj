@@ -11,13 +11,14 @@
 		6B38871229F1133500A5DE16 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B38871029F1133500A5DE16 /* test.cpp */; };
 		6B38874A29F1150D00A5DE16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B38874929F1150D00A5DE16 /* AppDelegate.m */; };
 		6B38874D29F1150D00A5DE16 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B38874C29F1150D00A5DE16 /* SceneDelegate.m */; };
-		6B38875029F1150D00A5DE16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B38874F29F1150D00A5DE16 /* ViewController.m */; };
+		6B38875029F1150D00A5DE16 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B38874F29F1150D00A5DE16 /* ViewController.mm */; };
 		6B38875329F1150D00A5DE16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B38875129F1150D00A5DE16 /* Main.storyboard */; };
 		6B38875529F1150E00A5DE16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B38875429F1150E00A5DE16 /* Assets.xcassets */; };
 		6B38875829F1150E00A5DE16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B38875629F1150E00A5DE16 /* LaunchScreen.storyboard */; };
 		6B38875B29F1150E00A5DE16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B38875A29F1150E00A5DE16 /* main.m */; };
 		6B38877B29F1153000A5DE16 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B38871029F1133500A5DE16 /* test.cpp */; };
 		6BE2781E29F2638C0013B387 /* timeperf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2781D29F2638C0013B387 /* timeperf.cpp */; };
+		6BE2781F29F26E620013B387 /* timeperf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2781D29F2638C0013B387 /* timeperf.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,7 +44,7 @@
 		6B38874B29F1150D00A5DE16 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		6B38874C29F1150D00A5DE16 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		6B38874E29F1150D00A5DE16 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6B38874F29F1150D00A5DE16 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6B38874F29F1150D00A5DE16 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		6B38875229F1150D00A5DE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B38875429F1150E00A5DE16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B38875729F1150E00A5DE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -117,7 +118,7 @@
 				6B38874B29F1150D00A5DE16 /* SceneDelegate.h */,
 				6B38874C29F1150D00A5DE16 /* SceneDelegate.m */,
 				6B38874E29F1150D00A5DE16 /* ViewController.h */,
-				6B38874F29F1150D00A5DE16 /* ViewController.m */,
+				6B38874F29F1150D00A5DE16 /* ViewController.mm */,
 				6B38875129F1150D00A5DE16 /* Main.storyboard */,
 				6B38875429F1150E00A5DE16 /* Assets.xcassets */,
 				6B38875629F1150E00A5DE16 /* LaunchScreen.storyboard */,
@@ -229,9 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B38875029F1150D00A5DE16 /* ViewController.m in Sources */,
+				6B38875029F1150D00A5DE16 /* ViewController.mm in Sources */,
 				6B38874A29F1150D00A5DE16 /* AppDelegate.m in Sources */,
 				6B38875B29F1150E00A5DE16 /* main.m in Sources */,
+				6BE2781F29F26E620013B387 /* timeperf.cpp in Sources */,
 				6B38877B29F1153000A5DE16 /* test.cpp in Sources */,
 				6B38874D29F1150D00A5DE16 /* SceneDelegate.m in Sources */,
 			);
