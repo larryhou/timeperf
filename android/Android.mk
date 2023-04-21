@@ -7,6 +7,7 @@ LOCAL_MODULE    := timeperf
 LOCAL_C_INCLUDES:= ../test/
 LOCAL_SRC_FILES := \
 	../timeperf/main.cpp \
+	../test/timeperf.cpp \
 	../test/test.cpp
 
 include $(BUILD_EXECUTABLE)

@@ -17,6 +17,7 @@
 		6B38875829F1150E00A5DE16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B38875629F1150E00A5DE16 /* LaunchScreen.storyboard */; };
 		6B38875B29F1150E00A5DE16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B38875A29F1150E00A5DE16 /* main.m */; };
 		6B38877B29F1153000A5DE16 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B38871029F1133500A5DE16 /* test.cpp */; };
+		6BE2781E29F2638C0013B387 /* timeperf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2781D29F2638C0013B387 /* timeperf.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,8 @@
 		6B38875729F1150E00A5DE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B38875929F1150E00A5DE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B38875A29F1150E00A5DE16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6BE2781B29F225850013B387 /* timeperf.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = timeperf.hpp; sourceTree = "<group>"; };
+		6BE2781D29F2638C0013B387 /* timeperf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = timeperf.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 		6B38870F29F112D100A5DE16 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				6BE2781D29F2638C0013B387 /* timeperf.cpp */,
+				6BE2781B29F225850013B387 /* timeperf.hpp */,
 				6B38871029F1133500A5DE16 /* test.cpp */,
 				6B38871129F1133500A5DE16 /* test.hpp */,
 			);
@@ -214,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BE2781E29F2638C0013B387 /* timeperf.cpp in Sources */,
 				6B38870929F0E52700A5DE16 /* main.cpp in Sources */,
 				6B38871229F1133500A5DE16 /* test.cpp in Sources */,
 			);

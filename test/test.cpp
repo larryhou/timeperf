@@ -6,6 +6,7 @@
 //
 
 #include "test.hpp"
+#include "timeperf.hpp"
 
 #include <iostream>
 #include <time.h>
@@ -34,34 +35,56 @@ void measure(std::function<void()> method) {
 }
 
 extern "C" void runtest() {
+    timeperf::point _(1);
+    
+    timeperf::enter(2);
     struct timeval tv;
     std::cout << "gettimeofday" << std::endl;
+    timeperf::enter(3);
     measure([&](){ gettimeofday(&tv, 0); });
+    timeperf::exit();
+    timeperf::exit();
     
+    timeperf::enter(4);
     std::cout << "clock" << std::endl;
     measure([&](){ clock(); });
+    timeperf::exit();
     
+    timeperf::enter(5);
     std::cout << "std::chrono::high_resolution_clock::now" << std::endl;
     measure([&](){ std::chrono::high_resolution_clock::now(); });
+    timeperf::exit();
     
+    timeperf::enter(6);
     std::cout << "std::chrono::system_clock::now" << std::endl;
     measure([&](){ std::chrono::system_clock::now(); });
+    timeperf::exit();
     
+    timeperf::enter(7);
     std::cout << "std::chrono::steady_clock::now" << std::endl;
     measure([&](){ std::chrono::steady_clock::now(); });
+    timeperf::exit();
     
+    timeperf::enter(8);
     std::cout << "std::chrono::steady_clock::now" << std::endl;
     measure([&](){ std::chrono::steady_clock::now(); });
+    timeperf::exit();
     
+    timeperf::enter(9);
     struct timespec tp;
     std::cout << "clock_gettime(CLOCK_MONOTONIC)" << std::endl;
     measure([&](){ clock_gettime(CLOCK_MONOTONIC, &tp); });
+    timeperf::exit();
     
+    timeperf::enter(10);
     std::cout << "clock_gettime(CLOCK_PROCESS_CPUTIME_ID)" << std::endl;
     measure([&](){ clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &tp); });
+    timeperf::exit();
     
 #ifdef __APPLE__
+    timeperf::enter(11);
     std::cout << "mach_absolute_time:" << std::endl;
     measure([&](){ mach_absolute_time(); });
+    timeperf::exit();
 #endif
 }
